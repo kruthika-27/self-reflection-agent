@@ -1,0 +1,12 @@
+[project]
+name = "self-reflection-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "langchain>=0.3.26",
+    "langgraph>=0.5.2",
+    "notebook>=7.4.4",
+    "python-dotenv>=1.1.1",
+]
