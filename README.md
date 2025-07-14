@@ -43,6 +43,15 @@ This is a Streamlit web application that corrects grammatical errors in user-pro
    - `langgraph`
    - `python-dotenv`
 
+# Setting Up a Google Cloud Project
+1. Log in to the [Google Cloud Console](https://console.cloud.google.com/).
+2. Navigate to the **Dashboard** or select the project dropdown at the top.
+3. Identify the **Project ID** for the project you want to use (e.g., `my-grammar-corrector-project`). The Project ID is a unique identifier, not the project name.
+4. If you don’t have a project:
+   - Click **New Project** in the Google Cloud Console.
+   - Follow the prompts to create a project, noting the Project ID.
+   - Enable billing for the project (required for API usage) by linking a billing account in the **Billing** section.
+   
 4. **Configure Google Cloud**:
    - Authenticate with Google Cloud:
      ```bash
