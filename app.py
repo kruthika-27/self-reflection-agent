@@ -11,7 +11,7 @@ st.markdown("""
     /* Center heading with responsive width */
     .centered-heading {
         text-align: center;
-        color: #ffffff; /* Changed to blue for visibility on black background */
+        color: #ffffff;
         font-family: 'Arial', sans-serif;
         margin-bottom: 20px;
         width: 100%; /* Full width of parent container */
@@ -24,7 +24,7 @@ st.markdown("""
     .custom-label {
         font-size: 18px;
         font-weight: 600;
-        color: #ffffff; /* Changed to blue for visibility on black background */
+        color: #ffffff;
         margin-bottom: 10px;
     }
 
