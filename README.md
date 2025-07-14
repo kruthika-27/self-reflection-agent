@@ -97,6 +97,3 @@ Final Score: 0.95
 - Add support for batch processing multiple sentences.
 - Enhance the arrow design with SVG graphics for a more polished look.
 - Include a history of past corrections for user reference.
-
-## License
-This project is licensed under the MIT License. See the `LICENSE` file for details.
