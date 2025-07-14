@@ -7,12 +7,16 @@ st.markdown("""
     .stApp {
         background-color: #000000; /* Light gray background for the app */
     }
-    /* Center heading */
+    /* Center heading with responsive width */
     .centered-heading {
         text-align: center;
         color: #ffffff;
         font-family: 'Arial', sans-serif;
         margin-bottom: 20px;
+        width: 100%; /* Full width of parent container */
+        max-width: 80%; /* Limits width to 90% of parent for smaller screens */
+        margin-left: auto;
+        margin-right: auto;
     }
 
     /* Custom label styling */
