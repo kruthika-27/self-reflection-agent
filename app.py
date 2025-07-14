@@ -1,20 +1,21 @@
 import streamlit as st
+from grammar_corrector import correct_grammar
 
 # Inject custom CSS for styling
 st.markdown("""
     <style>
         /* Style for the entire app background */
     .stApp {
-        background-color: #000000; /* Light gray background for the app */
+        background-color: #000000; /* Black background for the app */
     }
     /* Center heading with responsive width */
     .centered-heading {
         text-align: center;
-        color: #ffffff;
+        color: #ffffff; /* Changed to blue for visibility on black background */
         font-family: 'Arial', sans-serif;
         margin-bottom: 20px;
         width: 100%; /* Full width of parent container */
-        max-width: 80%; /* Limits width to 90% of parent for smaller screens */
+        max-width: 80%; /* Limits width to 80% of parent for smaller screens */
         margin-left: auto;
         margin-right: auto;
     }
@@ -23,7 +24,7 @@ st.markdown("""
     .custom-label {
         font-size: 18px;
         font-weight: 600;
-        color: #ffffff;
+        color: #ffffff; /* Changed to blue for visibility on black background */
         margin-bottom: 10px;
     }
 
@@ -87,7 +88,7 @@ st.markdown("""
         max-width: 800px;
         margin: 0 auto;
         padding: 80px;
-        background-color: #000000;
+        background-color: #000000; /* Black background for container */
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
@@ -120,9 +121,13 @@ user_input = st.text_area(
 # Submit button
 if st.button("Correct Grammar"):
     if user_input:
-        st.write("Processing your input: " + user_input)
-        # Add your grammar correction logic here
-        st.success("Correction will appear here (logic to be implemented).")
+        # Call the grammar correction function
+        corrected_sentence, score = correct_grammar(user_input)
+        st.write(f"**Input**: {user_input}")
+        if "Error" in corrected_sentence:
+            st.error(corrected_sentence)
+        else:
+            st.success(f"**Corrected Sentence**: {corrected_sentence}\n\n**Score**: {score:.2f}")
     else:
         st.error("Please enter a sentence to correct.")
 
