@@ -13,7 +13,7 @@ load_dotenv()
 class State(TypedDict):
     messages: Annotated[List[BaseMessage], add_messages]
     current_score: float
-    iterations: List[dict]  # New field to store iteration results
+    iterations: List[dict]
 
 # Initialize the LLM
 llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0.0)
